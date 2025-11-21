@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dab5e6;
+    margin: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+div {
+    background-color: #7c4683;
+    padding: 3px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-top: 1px;
+}
