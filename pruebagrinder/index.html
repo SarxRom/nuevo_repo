@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grid 3 Secciones</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr; /* izquierda - centro (más grande) - derecha */
+        grid-template-areas: "left center right";
+        overflow: hidden; /* evita scroll general */
+        font-family: Arial, sans-serif;
+    }
+
+    /* Secciones */
+    .left {
+        grid-area: left;
+        background: #ddd;
+        padding: 20px;
+    }
+
+    .center {
+        grid-area: center;
+        background: #f3f3f3;
+        padding: 20px;
+
+        /* Scroll SOLO en el centro */
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .right {
+        grid-area: right;
+        background: #ddd;
+        padding: 20px;
+    }
+
+    /* Ejemplo de contenido largo para mostrar scroll */
+    .big-content {
+        height: 2000px;
+        background: linear-gradient(white, lightgray);
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="left">
+        <h2>Izquierda</h2>
+        <p>Contenido fijo.</p>
+    </div>
+
+    <div class="center">
+        <h2>Centro (scroll)</h2>
+        <div class="big-content">
+            <p>Contenido largo que hace scroll solamente aquí.</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <h2>Derecha</h2>
+        <p>Contenido fijo.</p>
+    </div>
+
+</body>
+</html>

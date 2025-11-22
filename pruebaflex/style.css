@@ -1,0 +1,51 @@
+.espacios {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  grid-template-areas:
+    'header header header'
+    'menu main right';
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 5px;
+  gap: 5px;  
+  overflow: hidden;
+}
+
+.espacios div {
+  background-color: #ffffff;
+  color:#000;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.titulo {
+  grid-area: header;
+}
+
+.perfil {
+  grid-area: menu;
+}
+
+.publi {
+  grid-area: main;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: left;
+  scrollbar-width: none;
+}
+
+.publi::-webkit-scrollbar {
+  display: none;
+}
+.menu {
+  grid-area: right;
+}
+
+h3{
+    font-size: 25px;
+    text-align: left;
+    color: #000000;
+}
